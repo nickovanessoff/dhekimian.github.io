@@ -1,0 +1,95 @@
+url: https://techaccelerator.com
+
+excerpt_separator: <!--more-->
+
+kramdown:
+  input: GFM
+
+permalink: /blog/:title/
+
+collections:
+  introduction:
+    title: Introduction
+    output: true
+    permalink: /docs/:name/
+    order: 1
+  development:
+    title: Development
+    output: true
+    permalink: /docs/:name/
+    order: 2
+  deployment:
+    title: Deployment
+    output: true
+    permalink: /docs/:name/
+    order: 3
+  management:
+    title: Management
+    output: true
+    permalink: /docs/:name/
+    order: 4
+  monitoring:
+    title: Monitoring
+    output: true
+    permalink: /docs/:name/
+    order: 5
+  services:
+    title: Services
+    output: true
+    permalink: /docs/:name/
+    order: 6
+  integrations:
+    title: Integrations
+    output: true
+    permalink: /docs/:name/
+    order: 7
+  languages:
+    title: Languages & Frameworks
+    output: true
+    permalink: /docs/:name/
+    order: 8
+  console:
+    title: Console
+    output: true
+    permalink: /docs/:name/
+    order: 9
+  reference:
+    title: Reference
+    output: true
+    permalink: /docs/:name/
+    order: 10
+  help:
+    title: Help
+    output: true
+    permalink: /docs/:name/
+    order: 11
+
+defaults:
+  - scope:
+      path: ""
+    values:
+      layout: base
+  - scope:
+      path: pricing
+    values:
+      layout: pricing
+  - scope:
+      relative_path: docs
+    values:
+      layout: docs
+  - scope:
+      path: jobs
+    values:
+      layout: jobs
+  - scope:
+      path: legal
+    values:
+      layout: legal
+  - scope:
+      type: posts
+    values:
+      layout: post
+  - scope:
+      path: team
+    values:
+      layout: team

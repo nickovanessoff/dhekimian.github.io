@@ -1,0 +1,64 @@
+<div class="container">
+  <!-- Brand and toggle get grouped for better mobile display -->
+  <div class="navbar-header page-scroll">
+    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#menu">
+      <span class="sr-only">Toggle navigation</span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+    </button>
+    <a class="navbar-brand" href="/">
+      <span class="logo1">TECH</span><span class="logo2">ACCELERATOR</span>
+    </a>
+  </div>
+
+  <!-- Collect the nav links, forms, and other content for toggling -->
+  <div class="collapse navbar-collapse" id="menu">
+    <ul class="nav navbar-nav navbar-right">
+      {% for header in site.data.headers.header %}
+        {% comment %}
+        The 'matcher' var is the only way I could find to create a string containing a variable.
+        Using 'matcher', I can select only the pages w/ a 'url' having the value of 'header.link'
+        {% endcomment %}
+        {% assign matcher = header.link | prepend: "page.url contains '/" | append: "/'" %}
+        {% assign sub_menu = site.pages | where_exp:"page", matcher | sort: 'order' %}
+        {% if sub_menu.size > 1 %}
+        {% comment %}
+        I have this check because the array will always match at least one page
+        because of the index page (i.e. /solutions/index.html)
+
+        So, we only want to add the dropdown when there are pages other than the default
+        {% endcomment %}
+        <li class="dropdown">
+          <a href="{{ header.link }}" class="dropdown-toggle"
+                      data-toggle="dropdown"
+                      role="button"
+                      aria-haspopup="true"
+                      aria-expanded="false">{{ header.title }} <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            {% for sub in sub_menu %}
+              {% comment %}
+              The 'base_url' var is how I can ensure that we skip creating a submenu
+              item for the "/solutions/" page
+              {% endcomment %}
+              {% assign base_url = header.link | append: "/" | prepend: "/" %}
+              {% if sub.url == base_url %}
+                {% continue %}
+              {% endif %}
+              <li>
+                <a href="{{ sub.url }}">{{ sub.title }}</a>
+              </li>
+            {% endfor %}
+          </ul>
+        </li>
+        {% else %}
+        <li>
+          <a href="/{{ header.link }}">{{ header.title }}</a>
+        </li>
+        {% endif %}
+      {% endfor %}
+    </ul>
+  </div>
+  <!-- /.navbar-collapse -->
+</div>
+<!-- /.container-fluid -->

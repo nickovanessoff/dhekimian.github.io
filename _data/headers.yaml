@@ -1,0 +1,15 @@
+header:
+  - title: HOME
+    link: ""
+  - title: SOLUTIONS
+    link: solutions
+  - title: TECHNOLOGY
+    link: technology
+  - title: DOCS
+    link: docs
+  - title: PRICING
+    link: pricing
+  - title: CUSTOMERS
+    link: customers
+  - title: COMPANY
+    link: company

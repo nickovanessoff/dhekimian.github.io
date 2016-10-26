@@ -1,0 +1,67 @@
+---
+title: TechAccelerator Customers
+layout: base
+---
+
+<header class="cost">
+  <div class="container"><h2>TechAccelerator Customers</h2></div>
+</header>
+
+<div class="pricing">
+  <section id="intro">
+    <div class="container">
+      <div class="content">
+        <h2>Security, performance, availability, and automatic updates.</h2>
+        <p>
+          The open-source version is free.
+          <a id="sign_up" class="cta" href="https://console.TechAccelerator.com/grid/signup">Sign up</a> to unlock team and production support.
+        </p>
+      </div>
+    </div>
+  </section>
+  <!-- Logo Section -->
+  <section class="trusted-client">
+    <div class="container">
+      <div class="row">
+        <div class="trusted-client-inner text-center">
+          <h3>Trusted by</h3>
+
+          <div class="col-xs-12 col-sm-6 col-md-3">
+            <div>
+              <img src="/assets/images/customers/quantum.png" alt="Quantum" class="img-responsive">
+            </div>
+          </div>
+          <div class="col-xs-12 col-sm-6 col-md-3">
+            <div>
+              <img src="/assets/images/customers/scalearc.png" alt="ScaleArc" class="img-responsive">
+            </div>
+          </div>
+          <div class="col-xs-12 col-sm-6 col-md-3">
+            <div>
+              <img src="/assets/images/customers/scality.png" alt="Scality" class="img-responsive">
+            </div>
+          </div>
+          <div class="col-xs-12 col-sm-6 col-md-3">
+            <div>
+              <img src="/assets/images/customers/silverpeak.png" alt="Silver Peak" class="img-responsive">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="services">
+    <div class="container">
+      <div class="content">
+        <h2>Want help with a migration?</h2>
+
+        <p>TechAccelerator can help you containerize apps, set up your cloud and get your team on board.</p>
+        <p>
+          <a id="get_in_touch" href="#" class="cta js-intercom-show">Get in touch</a>
+          to get started.
+        </p>
+      </div>
+    </div>
+  </section>
+</div>

@@ -1,0 +1,36 @@
+---
+layout: base
+---
+
+<header class="solutions">
+  <div class="container">
+    <h2>{{ page.subtitle }}</h2>
+  </div>
+</header>
+
+<div class="container stacked-container">
+  {% for row in page.rows %}
+    <div class="row stacked-row">
+      <div class="col-md-6 col-sm-12 col-left stacked-col-left">
+          {% if row.left.visual %}
+            <img src="{{ row.left.visual }}" class="img-responsive"/>
+          {% else %}
+            <div class="stacked-align">
+              <h3 id="{{ row.left.dropdown | slugify }}">{{ row.left.title }}</h3>
+              {{ row.left.description }}
+            </div>
+          {% endif %}
+      </div>
+      <div class="col-md-6 col-sm-12 col-right stacked-col-right">
+          {% if row.right.visual %}
+            <img src="{{ row.right.visual }}" class="img-responsive"/>
+          {% else %}
+            <div class="stacked-align">
+              <h3 id="{{ row.right.dropdown | slugify }}">{{ row.right.title }}</h3>
+              {{ row.right.description }}
+            </div>
+          {% endif %}
+      </div>
+    </div>
+  {% endfor %}
+</div>

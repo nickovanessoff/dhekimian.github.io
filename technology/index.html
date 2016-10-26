@@ -1,0 +1,18 @@
+---
+title: Technology
+layout: base
+---
+
+<header class="solutions">
+  <div class="container">
+    <h2>Solutions</h2>
+  </div>
+</header>
+
+<div class="container">
+  <ul>
+  {% for sub in site.data.technology.submenu %}
+    <li><a href="{{ sub.link }}">{{ sub.title }}</a></li>
+  {% endfor %}
+  </ul>
+</div>
